@@ -13,10 +13,6 @@ class client extends connection{
          $clients = $this->pdo
          ->query('SELECT id_cliente,nome_cliente,email,n_bilhete,is_taxista,is_charger_taxista,password FROM cliente')
          ->fetchAll(\PDO::FETCH_ASSOC);
-
-        // foreach ($clients as $client){
-        //     var_dump($clients);
-        // }
         return $clients;
         
      }
