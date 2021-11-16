@@ -1,0 +1,8 @@
+<?php
+   putenv('DISPLAY_ERROR_DETAILS=' . true);
+
+   putenv('TRANSFACIL_DB_MYSQL_HOST=');
+   putenv('TRANSFACIL_DB_MYSQL_DBNAME=');
+   putenv('TRANSFACIL_DB_MYSQL_USER=');
+   putenv('TRANSFACIL_DB_MYSQL_PASSWORD=');
+   putenv('TRANSFACIL_DB_MYSQL_PORT=');
