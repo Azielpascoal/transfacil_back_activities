@@ -9,12 +9,12 @@ use Psr\Http\Message\ResponseInterface as Response;
 
 
     final class ClientController{
-        public function getClient(Request $request,Response $response, array $arg):Response
+        public function getClient(Request $request,Response $response, array $arg)
         {
            $client = new client();
-           $client->getAllClient();
-           $response = $response->withJson($client);
-            return $response;
+           $clients=$client->getAllClient();
+           $responses = $response->withJson($clients);
+            return $responses;
         }
         public function insertClient(Request $request,Response $response, array $arg):Response
         {
@@ -31,7 +31,7 @@ use Psr\Http\Message\ResponseInterface as Response;
 
             $response = $response->withJson([
                 "message"=>"Novo Cliente Adicionado !"
-            ]);
+            ],301);
             return $response;
         }
         public function updateClient(Request $request,Response $response, array $arg):Response
